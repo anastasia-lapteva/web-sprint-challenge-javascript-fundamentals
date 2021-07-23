@@ -34,7 +34,7 @@ function summation(number)
     return (number * (number + 1) / 2);
 }
 
-console.log("Task 2", summation(4));
+console.log("Task 2:", summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -64,7 +64,7 @@ function animalNames(array)
 
     array.forEach(animal =>
     {
-        displayNames.push({ name: animal.animal_name, scientific: animal.scientific_name });
+        displayNames.push(`name: ${animal.animal_name}, scientific: ${animal.scientific_name}`);
     });
 
     return displayNames;
@@ -109,11 +109,6 @@ Using USApop find the total population from the zoos array using the .reduce() m
 Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
 */
 
-// function USApop()
-// {
-
-// }
-
 function USApop(array)
 {
     const reducedAnimalPop = array.reduce((accumulator, item) => 
@@ -137,9 +132,6 @@ console.log("Request 4:", USApop(zooAnimals));
 
 function consume(a, b, cb)
 {
-    this.a = a;
-    this.b = b;
-
     return cb(a, b);
 }
 
@@ -258,9 +250,6 @@ const cuboidTwo = new CuboidMakerTwo(4, 5, 5);
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 console.log(cuboidTwo.volume()); // 100
 console.log(cuboidTwo.surfaceArea()); // 130
-
-
-
 
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
