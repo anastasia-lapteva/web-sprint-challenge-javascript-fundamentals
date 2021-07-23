@@ -58,11 +58,19 @@ Use animalNames to populate and return the displayNames array with only the anim
 displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
 */
 
-function animalNames(/*Your Code Here*/)
+function animalNames(array)
 {
-    /*Your Code Here*/
+    const displayNames = [];
+
+    array.forEach(animal =>
+    {
+        displayNames.push({ name: animal.animal_name, scientific: animal.scientific_name });
+    });
+
+    return displayNames;
 }
 
+console.log("Request 1", animalNames(zooAnimals));
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
 The zoo needs a list of all their animal's names converted to lower case. 
@@ -70,10 +78,12 @@ Using lowerCaseNames use .map() to create a new array of strings with the animal
 For example: ['jackal, asiatic', .....]
 */
 
-function lowerCaseNames(/*Your Code Here*/)
+function lowerCaseNames()
 {
-    /*Your Code Here*/
+
 }
+
+
 
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
